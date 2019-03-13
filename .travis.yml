@@ -1,0 +1,14 @@
+language: python
+
+python:
+  - "3.4"
+
+env:
+  - DJANGO_VERSION=1.4.1
+
+cache: pip
+
+install:
+  - pip install -q Django==$DJANGO_VERSION
+
+script: python unit_tests.py
