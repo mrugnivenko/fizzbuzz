@@ -36,4 +36,4 @@ def func(posl):
     s = ''
     for i in range(length):
         s += str(posl[i]) + ' ' 
-    return s
+    return s 
