@@ -1,4 +1,5 @@
-import math
+import re
+
 def is_5(chislo1):
     chislo = str(chislo1)
     if chislo[-1] == '5' or chislo[-1] == '0':
@@ -25,6 +26,7 @@ def is_3_or_5(chislo1):
         return False
 
 def func(posl):
+    posl.split()
     length = len(posl)
     for i in range(length):
         if is_3_or_5(posl[i]):
