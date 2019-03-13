@@ -19,7 +19,7 @@ def is_3(chislo1):
     else:
         return is_3(summ)
 
-def is_3_5(chislo1):
+def is_3_or_5(chislo1):
     if is_3(chislo1) and is_5(chislo1):
         return True
     else:
@@ -28,7 +28,7 @@ def is_3_5(chislo1):
 def func(posl):
     length = len(posl)
     for i in range(length):
-        if is_3_5(posl[i]):
+        if is_3_or_5(posl[i]):
             posl[i] = 'fizzbuzz'
         elif is_3(posl[i]):
             posl[i] = 'fizz'
