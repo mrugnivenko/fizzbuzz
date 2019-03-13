@@ -34,4 +34,7 @@ def func(posl):
             posl[i] = 'fizz'
         elif is_5(posl[i]):
             posl[i] = 'buzz'
-    return posl
+    s = ''
+    for i in range(length):
+        s += str(posl[i]) + ' ' 
+    return s
