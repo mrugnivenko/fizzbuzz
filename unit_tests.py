@@ -10,12 +10,15 @@ class TestFizzbuzz(unittest.TestCase):
 	def test_fizzbuzz(self):
 		vchod, vichod = [], []
 		with open('tests.txt') as file:
+			i = 0
 			for line in file:
-				nums.append(int(line[:line.find(' ')]))
-				A.append(list(line[line.find(' ') + 1:]))
-		for i in range(len(nums)):
-			f = func(nums[i])
-			self.assertEqual(f, A[i])
+				if i % 2 == 0:
+					vchod[i] = line
+				if i % 2 == 1:
+					vichod[i] = line
+		for i in range(len(vchod)):
+			f = func(vchod[i])
+			self.assertEqual(f, vichod[i])
 
 if __name__=="__main__":
 	unittest.main()
