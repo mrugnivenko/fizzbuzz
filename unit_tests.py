@@ -13,9 +13,10 @@ class TestFizzbuzz(unittest.TestCase):
 			i = 0
 			for line in file:
 				if i % 2 == 0:
-					vchod[i] = line
+					vchod.append(line)
 				if i % 2 == 1:
-					vichod[i] = line
+					vichod.append(line)
+				i += 1
 		for i in range(len(vchod)):
 			f = func(vchod[i])
 			self.assertEqual(f, vichod[i])
