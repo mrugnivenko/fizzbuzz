@@ -25,7 +25,7 @@ def is_3_5(chislo1):
     else:
         return False
 
-def f(posl):
+def func(posl):
     length = len(posl)
     for i in range(length):
         if is_3_5(posl[i]):
