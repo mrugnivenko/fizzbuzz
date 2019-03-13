@@ -10,6 +10,6 @@ cache: pip
 
 install:
   - pip install -q Django==$DJANGO_VERSION
-  - pip install math
+  
 
 script: python unit_tests.py
