@@ -7,8 +7,7 @@ def is_5(chislo1):
         return False
 
 def is_3(chislo1):
-    chislo = fabs(int(chislo1))
-    chislo = str(chislo)
+    chislo = str(chislo1)
     summ = 0
     for simvol in chislo:
         summ += int(simvol)
