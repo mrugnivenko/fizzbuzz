@@ -1,3 +1,4 @@
+import math
 def is_5(chislo1):
     chislo = str(chislo1)
     if chislo[-1] == '5' or chislo[-1] == '0':
@@ -6,8 +7,7 @@ def is_5(chislo1):
         return False
 
 def is_3(chislo1):
-    chislo = str(chislo1)
-    chislo = abs(int(chislo))
+    chislo = math.fabs(int(chislo1))
     chislo = str(chislo)
     summ = 0
     for simvol in chislo:
