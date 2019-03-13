@@ -13,6 +13,7 @@ class TestFizzbuzz(unittest.TestCase):
 			i = 0
 			for line in file:
 				if i % 2 == 0:
+					line = line.split(',')
 					vchod.append(line)
 				if i % 2 == 1:
 					vichod.append(line)
