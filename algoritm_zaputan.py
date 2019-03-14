@@ -1,6 +1,13 @@
 from random import randint
-import math
 
+import numpy as np
+from numpy import linalg
+from math import *
+from sympy import * 
+
+l = 7
+r = 'lool'
+q = [1,2,3,4,4,0]
 p = 0
 y = 5 
 for i in range(10):
