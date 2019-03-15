@@ -1,4 +1,36 @@
-import re
+
+
+def give_start(stroka):
+    i = 0
+    while i < len(stroka):
+        for simvol in stroka:
+            if simvol in {'-','0','1','2','3','4','5','6','7','8','9'}:
+                break
+            else :
+                i += 1
+        if i == len(stroka):
+            return -1
+        else:
+            return i
+        
+def give_end(stroka,start):
+    i = start
+    while i < len(stroka):
+        if stroka[i] in {'-','0','1','2','3','4','5','6','7','8','9'}:
+            i += 1
+        else :
+            break
+    return i-1
+
+def convert(stroka):
+    new_stroka = stroka
+    mass = []
+    while give_start(new_stroka) >= 0:
+        start = give_start(new_stroka)
+        end = give_end(new_stroka,start)
+        mass.append(new_stroka[start:end+1])
+        new_stroka = new_stroka[end+1:]
+    return mass
 
 def is_5(chislo1):
     chislo = str(chislo1)
@@ -26,16 +58,16 @@ def is_3_or_5(chislo1):
         return False
 
 def func(posl):
-    posl.split()
-    length = len(posl)
-    for i in range(length):
-        if is_3_or_5(posl[i]):
-            posl[i] = 'fizzbuzz'
-        elif is_3(posl[i]):
-            posl[i] = 'fizz'
-        elif is_5(posl[i]):
-            posl[i] = 'buzz'
+    mass = convert(posl)
+    length = len(mass)
+    for i in range(len(mass)):
+        if is_3_or_5(mass[i]):
+            mass[i] = 'fizzbuzz'
+        elif is_3(mass[i]):
+            mass[i] = 'fizz'
+        elif is_5(mass[i]):
+            mass[i] = 'buzz'
     s = ''
     for i in range(length):
-        s += str(posl[i]) + ' ' 
+        s += str(mass[i]) + ' ' 
     return s 
