@@ -68,6 +68,8 @@ def func(posl):
         elif is_5(mass[i]):
             mass[i] = 'buzz'
     s = ''
-    for i in range(length):
-        s += str(mass[i]) + ' ' 
+    for i in range(length-1):
+        s += str(mass[i]) + ' '
+    s += str(mass[length-1])
+    s += '\n'
     return s 
